@@ -1,0 +1,1 @@
+Escribe el comando ```docker-compose up -d``` en la terminal.

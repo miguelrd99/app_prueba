@@ -1,0 +1,4 @@
+fastapi==0.110.1
+numpy
+scikit-learn
+uvicorn==0.29.0
