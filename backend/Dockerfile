@@ -1,6 +1,5 @@
 FROM python:3.11
-COPY . /app_prueba
-WORKDIR /app_prueba
+WORKDIR /app
 RUN pip install -r requirements.txt
-EXPOSE 8000
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000" ,"--reload"]
+EXPOSE 8080
+CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8080"]
