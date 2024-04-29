@@ -22,7 +22,7 @@ input_data = {
             
               }  
 st.write(input_data)
-response = requests.post('http://backend:8080/predict/', json=input_data)
+response = requests.post('http://api:8080/predict/', json=input_data)
 st.write(response.json())
 prediction = response.json()
 st.write(f"Predicted Species: {prediction}")
