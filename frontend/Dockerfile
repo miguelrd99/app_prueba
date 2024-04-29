@@ -1,7 +1,13 @@
 FROM python:3.11
-WORKDIR /app 
-COPY requirements.txt ./requirements.txt
-COPY . /app
+
+COPY requirements.txt app/requirements.txt
+WORKDIR /app
+
 RUN pip install -r requirements.txt
+COPY . /app
+
 EXPOSE 8501
-CMD ["sh", "-c", "streamlit run --server.port $PORT /app/streamlit_app.py"]
+
+ENTRYPOINT ["streamlit","run"]
+
+CMD ["streamlit_app.py"]
